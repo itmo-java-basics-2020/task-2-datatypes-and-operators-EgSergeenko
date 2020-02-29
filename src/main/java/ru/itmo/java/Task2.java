@@ -10,16 +10,14 @@ public class Task2 {
      * - дано 17.9
      * - вывод 0.9
      */
-    double getFractionalPart(double realNumber)
-    {
+    double getFractionalPart(double realNumber) {
         return realNumber % 1;
     }
 
     /**
      * Дан символ, верните его код. Не используйте явное приведение типов и любые библиотечные функции
      */
-    int charCode(char c)
-    {
+    int charCode(char c) {
         int code = c;
         return code;
     }
@@ -27,8 +25,7 @@ public class Task2 {
     /**
      * Даны 2 целых числа. Проверьте равны ли они
      */
-    boolean testIfIntsEqual(Integer a, Integer b)
-    {
+    boolean testIfIntsEqual(Integer a, Integer b) {
         return a.equals(b);
     }
 
@@ -41,19 +38,14 @@ public class Task2 {
      * @param rightBound  верхняя граница диапазона
      * @param inclusively входят ли границы в заданный даипазон
      */
-    boolean numberInRange(Integer number, Integer leftBound, Integer rightBound, Boolean inclusively)
-    {
-        if (number != null && leftBound != null && rightBound != null && inclusively != null)
-        {
-            if (inclusively)
-            {
-                if (number >= leftBound && number <= rightBound)
-                {
+    boolean numberInRange(Integer number, Integer leftBound, Integer rightBound, Boolean inclusively) {
+        if (number != null && leftBound != null && rightBound != null && inclusively != null) {
+            if (inclusively) {
+                if (number >= leftBound && number <= rightBound) {
                     return true;
                 }
             }
-            if (number > leftBound && number < rightBound)
-            {
+            if (number > leftBound && number < rightBound) {
                 return true;
             }
         }
@@ -64,8 +56,7 @@ public class Task2 {
      * Даны 3 символа. Определите является ли хотя бы один из них цифрой 1..9
      */
     boolean atLeastOneIsDigit(char c1, char c2, char c3) {
-        if (Character.isDigit(c1) || Character.isDigit(c2) || Character.isDigit(c3))
-        {
+        if (Character.isDigit(c1) || Character.isDigit(c2) || Character.isDigit(c3)) {
             return true;
         }
         return false;
@@ -74,16 +65,14 @@ public class Task2 {
     /**
      * Даны два вещественных числа. Определите равны ли они
      */
-    boolean areRealNumbersEqual(double a, double b)
-    {
+    boolean areRealNumbersEqual(double a, double b) {
         return Math.abs(a - b) < 1e-5;
     }
 
     /**
      * Дано трехзначное число 100 <= N <= 999. Найдите сумму его чисел.
      */
-    int sumOfDigits(int n)
-    {
+    int sumOfDigits(int n) {
         int ones = 0;
         int tens = 0;
         int hundreds = 0;
@@ -98,14 +87,10 @@ public class Task2 {
     /**
      * Дано натуральное число N <= 10000. Выведите следующее после N четное число. Например: N = 8, Result = 10
      */
-    int nextEvenNumber(int n)
-    {
-        if (n % 2 == 0)
-        {
-            return  n + 2;
-        }
-        else
-        {
+    int nextEvenNumber(int n) {
+        if (n % 2 == 0) {
+            return n + 2;
+        } else {
             return n + 1;
         }
     }
@@ -116,31 +101,21 @@ public class Task2 {
      * Выведите минимальное кол-во парт, которые нужно приобрести школе, при условии что каждый из классов сидит в
      * своем кабинете
      */
-    int schoolDesks(int num1, int num2, int num3)
-    {
+    int schoolDesks(int num1, int num2, int num3) {
         int sum = 0;
-        if (num1 % 2 == 0)
-        {
+        if (num1 % 2 == 0) {
             sum += num1 / 2;
-        }
-        else
-        {
+        } else {
             sum += (num1 + 1) / 2;
         }
-        if (num2 % 2 == 0)
-        {
+        if (num2 % 2 == 0) {
             sum += num2 / 2;
-        }
-        else
-        {
+        } else {
             sum += (num2 + 1) / 2;
         }
-        if (num3 % 2 == 0)
-        {
+        if (num3 % 2 == 0) {
             sum += num3 / 2;
-        }
-        else
-        {
+        } else {
             sum += (num3 + 1) / 2;
         }
         return sum;
@@ -149,8 +124,7 @@ public class Task2 {
     /**
      * Дано натуральное число N >= 10. Выведите результат применения XOR к последним 2-м цифрам числа N
      */
-    int xorDigits(int N)
-    {
+    int xorDigits(int N) {
         int x0;
         int x1;
         x0 = N % 10;
